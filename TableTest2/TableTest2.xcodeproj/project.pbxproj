@@ -21,8 +21,6 @@
 		01A30F39167B59FF00901990 /* MyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A30F38167B59FF00901990 /* MyCell.m */; };
 		01A30F3D167B5A3700901990 /* MyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A30F3C167B5A3700901990 /* MyCell.xib */; };
 		01A30F3F167B5AD300901990 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 01A30F3E167B5AD300901990 /* 2.jpg */; };
-		01A30F43167B663E00901990 /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A30F41167B663E00901990 /* MyViewController.m */; };
-		01A30F44167B663E00901990 /* MyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A30F42167B663E00901990 /* MyViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,9 +44,6 @@
 		01A30F38167B59FF00901990 /* MyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCell.m; sourceTree = "<group>"; };
 		01A30F3C167B5A3700901990 /* MyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyCell.xib; sourceTree = "<group>"; };
 		01A30F3E167B5AD300901990 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
-		01A30F40167B663E00901990 /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
-		01A30F41167B663E00901990 /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
-		01A30F42167B663E00901990 /* MyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,9 +100,6 @@
 				01A30F37167B59FF00901990 /* MyCell.h */,
 				01A30F38167B59FF00901990 /* MyCell.m */,
 				01A30F3C167B5A3700901990 /* MyCell.xib */,
-				01A30F40167B663E00901990 /* MyViewController.h */,
-				01A30F41167B663E00901990 /* MyViewController.m */,
-				01A30F42167B663E00901990 /* MyViewController.xib */,
 			);
 			path = TableTest2;
 			sourceTree = "<group>";
@@ -184,7 +176,6 @@
 				01A30F2D167B485100901990 /* ViewController.xib in Resources */,
 				01A30F3D167B5A3700901990 /* MyCell.xib in Resources */,
 				01A30F3F167B5AD300901990 /* 2.jpg in Resources */,
-				01A30F44167B663E00901990 /* MyViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,7 +190,6 @@
 				01A30F21167B485100901990 /* AppDelegate.m in Sources */,
 				01A30F2A167B485100901990 /* ViewController.m in Sources */,
 				01A30F39167B59FF00901990 /* MyCell.m in Sources */,
-				01A30F43167B663E00901990 /* MyViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +303,7 @@
 				01A30F32167B485100901990 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

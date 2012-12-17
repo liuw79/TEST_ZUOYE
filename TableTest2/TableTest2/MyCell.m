@@ -14,7 +14,10 @@
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        // Initialization code
+        UILabel *lable = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 30)];
+        lable.text = @"888";
+        [self addSubview:lable];
+        [lable release];
     }
     return self;
 }
