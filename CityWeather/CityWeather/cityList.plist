@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>深圳</key>
+	<string>101280601</string>
+	<key>天津</key>
+	<string>101030100</string>
+	<key>北京</key>
+	<string>101010100</string>
+</dict>
+</plist>

@@ -17,7 +17,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    NSArray *array = [NSArray arrayWithObjects:@"11", @"22", @"33", nil];
+    NSData *data = [NSJSONSerialization dataWithJSONObject:array options:NSJSONWritingPrettyPrinted error:nil];
+    NSLog(@"%@", data);
+    
+    NSArray *array2 = [NSJSONSerialization JSONObjectWithData:data options:NSJSONWritingPrettyPrinted error:nil];
+    NSLog(@"%@", array2);
 }
 
 - (void)didReceiveMemoryWarning

@@ -18,6 +18,11 @@
 		012C6EA3167F4125003CA8A3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 012C6EA2167F4125003CA8A3 /* Default-568h@2x.png */; };
 		012C6EA6167F4125003CA8A3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 012C6EA5167F4125003CA8A3 /* ViewController.m */; };
 		012C6EA9167F4125003CA8A3 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 012C6EA7167F4125003CA8A3 /* ViewController.xib */; };
+		012C6EC3167F56A6003CA8A3 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 012C6EB9167F56A6003CA8A3 /* JSONKit.m */; };
+		012C6EC4167F56A6003CA8A3 /* SinaWeibo.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 012C6EBB167F56A6003CA8A3 /* SinaWeibo.bundle */; };
+		012C6EC5167F56A6003CA8A3 /* SinaWeibo.m in Sources */ = {isa = PBXBuildFile; fileRef = 012C6EBD167F56A6003CA8A3 /* SinaWeibo.m */; };
+		012C6EC6167F56A6003CA8A3 /* SinaWeiboAuthorizeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 012C6EBF167F56A6003CA8A3 /* SinaWeiboAuthorizeView.m */; };
+		012C6EC7167F56A6003CA8A3 /* SinaWeiboRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 012C6EC2167F56A6003CA8A3 /* SinaWeiboRequest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +42,16 @@
 		012C6EA4167F4125003CA8A3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		012C6EA5167F4125003CA8A3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		012C6EA8167F4125003CA8A3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		012C6EB8167F56A6003CA8A3 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		012C6EB9167F56A6003CA8A3 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		012C6EBB167F56A6003CA8A3 /* SinaWeibo.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SinaWeibo.bundle; sourceTree = "<group>"; };
+		012C6EBC167F56A6003CA8A3 /* SinaWeibo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SinaWeibo.h; sourceTree = "<group>"; };
+		012C6EBD167F56A6003CA8A3 /* SinaWeibo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SinaWeibo.m; sourceTree = "<group>"; };
+		012C6EBE167F56A6003CA8A3 /* SinaWeiboAuthorizeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SinaWeiboAuthorizeView.h; sourceTree = "<group>"; };
+		012C6EBF167F56A6003CA8A3 /* SinaWeiboAuthorizeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SinaWeiboAuthorizeView.m; sourceTree = "<group>"; };
+		012C6EC0167F56A6003CA8A3 /* SinaWeiboConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SinaWeiboConstants.h; sourceTree = "<group>"; };
+		012C6EC1167F56A6003CA8A3 /* SinaWeiboRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SinaWeiboRequest.h; sourceTree = "<group>"; };
+		012C6EC2167F56A6003CA8A3 /* SinaWeiboRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SinaWeiboRequest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +71,8 @@
 		012C6E7D167F4125003CA8A3 = {
 			isa = PBXGroup;
 			children = (
+				012C6EB7167F56A6003CA8A3 /* JSONKit */,
+				012C6EBA167F56A6003CA8A3 /* SinaWeibo */,
 				012C6E92167F4125003CA8A3 /* JsonTest */,
 				012C6E8B167F4125003CA8A3 /* Frameworks */,
 				012C6E89167F4125003CA8A3 /* Products */,
@@ -105,6 +122,30 @@
 				012C6EA2167F4125003CA8A3 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		012C6EB7167F56A6003CA8A3 /* JSONKit */ = {
+			isa = PBXGroup;
+			children = (
+				012C6EB8167F56A6003CA8A3 /* JSONKit.h */,
+				012C6EB9167F56A6003CA8A3 /* JSONKit.m */,
+			);
+			path = JSONKit;
+			sourceTree = "<group>";
+		};
+		012C6EBA167F56A6003CA8A3 /* SinaWeibo */ = {
+			isa = PBXGroup;
+			children = (
+				012C6EBB167F56A6003CA8A3 /* SinaWeibo.bundle */,
+				012C6EBC167F56A6003CA8A3 /* SinaWeibo.h */,
+				012C6EBD167F56A6003CA8A3 /* SinaWeibo.m */,
+				012C6EBE167F56A6003CA8A3 /* SinaWeiboAuthorizeView.h */,
+				012C6EBF167F56A6003CA8A3 /* SinaWeiboAuthorizeView.m */,
+				012C6EC0167F56A6003CA8A3 /* SinaWeiboConstants.h */,
+				012C6EC1167F56A6003CA8A3 /* SinaWeiboRequest.h */,
+				012C6EC2167F56A6003CA8A3 /* SinaWeiboRequest.m */,
+			);
+			path = SinaWeibo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +204,7 @@
 				012C6EA1167F4125003CA8A3 /* Default@2x.png in Resources */,
 				012C6EA3167F4125003CA8A3 /* Default-568h@2x.png in Resources */,
 				012C6EA9167F4125003CA8A3 /* ViewController.xib in Resources */,
+				012C6EC4167F56A6003CA8A3 /* SinaWeibo.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +218,10 @@
 				012C6E99167F4125003CA8A3 /* main.m in Sources */,
 				012C6E9D167F4125003CA8A3 /* AppDelegate.m in Sources */,
 				012C6EA6167F4125003CA8A3 /* ViewController.m in Sources */,
+				012C6EC3167F56A6003CA8A3 /* JSONKit.m in Sources */,
+				012C6EC5167F56A6003CA8A3 /* SinaWeibo.m in Sources */,
+				012C6EC6167F56A6003CA8A3 /* SinaWeiboAuthorizeView.m in Sources */,
+				012C6EC7167F56A6003CA8A3 /* SinaWeiboRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
