@@ -132,6 +132,7 @@
                                               cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
         [alert show];
     }
+    
 }
 
 - (void)loadMoreEvent:(UITableView *)tableView ofPath:(NSIndexPath *)indexPath
