@@ -25,7 +25,10 @@
     CGPathAddRect(path, NULL, self.bounds);
     
     //2 In Core Text you won’t be using NSString, but rather NSAttributedString, as shown here. NSAttributedString is a very powerful NSString derivate class, which allows you apply formatting attributes to text. For the moment we won’t be using formatting – this just creates a string holding plain text.
-    NSAttributedString* attString = [[NSAttributedString alloc] initWithString:@"Hello world core text!"];
+    MarkupParser* p = [[MarkupParser alloc] init];
+    //NSAttributedString* attString = [[NSAttributedString alloc] initWithString:@"Hello world core text!"];
+    NSAttributedString* attString = [p attrStringFromMarkup:@"Hello <font color=\"red\">core text <font color=\"blue\">world!"];
+    
     
     //3 create a CTFramesetter reference
     //CTFramesetter is the most important class to use when drawing with Core Text. It manages your font references and your text drawing frames. For the moment what you need to know is that CTFramesetterCreateWithAttributedString creates a CTFramesetter for you, retains it and initializes it with the supplied attributed string. In this section, after you have the framesetter you create a frame, you give the CTFramesetterCreateFrame a range of the string to render (we choose the entire string here) and the rectangle where the text will appear when drawn.

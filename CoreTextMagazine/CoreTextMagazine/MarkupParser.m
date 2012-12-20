@@ -16,7 +16,7 @@
 {
     self = [super init];
     if (self) {
-        self.font = @"Arial";
+        self.font = @"ArialMT";
         self.color = [UIColor blackColor];
         self.strokeColor = [UIColor whiteColor];
         self.strokeWidth = 0.0;
@@ -32,22 +32,26 @@
     NSRegularExpression* regex = [[NSRegularExpression alloc] initWithPattern:@"(.*?)(<[^>]+>|\\Z)" options:NSRegularExpressionCaseInsensitive|NSRegularExpressionDotMatchesLineSeparators error:nil];
     
     NSArray* chunks = [regex matchesInString:markup options:0 range:NSMakeRange(0, [markup length])];
+    NSLog(@"chunks: %@", chunks);
     
     for (NSTextCheckingResult* b in chunks) {
+        //You iterate over the chunks matched by the prior regular expression, and in this section you split the chunks by the "<" character (the tag opener). As a result, in parts[0] you have the text to add to the result and in parts[1] you have the content of the tag that changes the formatting for the text that follows.
         NSArray* parts = [[markup substringWithRange:b.range]
                           componentsSeparatedByString:@"<"]; //1
+        NSLog(@"parts: %@", parts);
         
-        CGFontRef fontRef = CTFontCreateWithName((__bridge CFStringRef)self.font,
-                                                 24.0f, NULL);
+        CTFontRef fontRef = CTFontCreateWithName((__bridge CFStringRef)self.font,24.0f, NULL);
         
         //apply the current text style //2
+        //Next you create a dictionary holding a number of formatting options - this is the way you can pass formatting attributes to a NSAttributedString. Have a look at the key names - they are Apple defined constants which are pretty self-explanatory (of you can check out Apple's Core Text String Attributes Reference for full details). By calling appendAttributedString: the new text chunk with applied formatting is added to the result string.
         NSDictionary* attrs = [NSDictionary dictionaryWithObjectsAndKeys:
                                (id)self.color.CGColor, NSForegroundColorAttributeName,
                                (__bridge id)fontRef, NSFontAttributeName,
-                               //(id)self.strokeColor.CGColor, (NSString *) kCTTextAlignmentJustified,
-                               //(id)[NSNumber numberWithFloat: self.strokeWidth], (NSString *)kCTStrokeWidthAttributeName,
+                               (id)self.strokeColor.CGColor, (NSString *)kCTStrokeColorAttributeName,
+                               (id)[NSNumber numberWithFloat: self.strokeWidth], (NSString *)kCTStrokeWidthAttributeName,
                                nil];
         [aString appendAttributedString:[[NSAttributedString alloc] initWithString:[parts objectAtIndex:0] attributes:attrs]];
+        //NSLog(@"aString: %@", aString);
         
         CFRelease(fontRef);
         
