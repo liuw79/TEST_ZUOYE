@@ -21,6 +21,10 @@
 		01601FDF16818F8C00E5FEF5 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01601FDE16818F8C00E5FEF5 /* CoreText.framework */; };
 		01601FE21681921D00E5FEF5 /* CTView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01601FE11681921D00E5FEF5 /* CTView.m */; };
 		01601FE51681B8C600E5FEF5 /* MarkupParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 01601FE41681B8C600E5FEF5 /* MarkupParser.m */; };
+		01601FEF1684233A00E5FEF5 /* test.txt in Resources */ = {isa = PBXBuildFile; fileRef = 01601FEE1684233A00E5FEF5 /* test.txt */; };
+		0160200016842D7500E5FEF5 /* test3.txt in Resources */ = {isa = PBXBuildFile; fileRef = 01601FFF16842D7500E5FEF5 /* test3.txt */; };
+		016020031684312F00E5FEF5 /* CTColumnView.m in Sources */ = {isa = PBXBuildFile; fileRef = 016020021684312F00E5FEF5 /* CTColumnView.m */; };
+		016020051684471000E5FEF5 /* xzy.txt in Resources */ = {isa = PBXBuildFile; fileRef = 016020041684471000E5FEF5 /* xzy.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +49,11 @@
 		01601FE11681921D00E5FEF5 /* CTView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTView.m; sourceTree = "<group>"; };
 		01601FE31681B8C600E5FEF5 /* MarkupParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarkupParser.h; sourceTree = "<group>"; };
 		01601FE41681B8C600E5FEF5 /* MarkupParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarkupParser.m; sourceTree = "<group>"; };
+		01601FEE1684233A00E5FEF5 /* test.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.txt; sourceTree = "<group>"; };
+		01601FFF16842D7500E5FEF5 /* test3.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test3.txt; sourceTree = "<group>"; };
+		016020011684312F00E5FEF5 /* CTColumnView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTColumnView.h; sourceTree = "<group>"; };
+		016020021684312F00E5FEF5 /* CTColumnView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTColumnView.m; sourceTree = "<group>"; };
+		016020041684471000E5FEF5 /* xzy.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = xzy.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +110,8 @@
 				01601FC216818F6900E5FEF5 /* Supporting Files */,
 				01601FE01681921D00E5FEF5 /* CTView.h */,
 				01601FE11681921D00E5FEF5 /* CTView.m */,
+				016020011684312F00E5FEF5 /* CTColumnView.h */,
+				016020021684312F00E5FEF5 /* CTColumnView.m */,
 				01601FE31681B8C600E5FEF5 /* MarkupParser.h */,
 				01601FE41681B8C600E5FEF5 /* MarkupParser.m */,
 			);
@@ -110,6 +121,9 @@
 		01601FC216818F6900E5FEF5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				016020041684471000E5FEF5 /* xzy.txt */,
+				01601FFF16842D7500E5FEF5 /* test3.txt */,
+				01601FEE1684233A00E5FEF5 /* test.txt */,
 				01601FC316818F6900E5FEF5 /* CoreTextMagazine-Info.plist */,
 				01601FC416818F6900E5FEF5 /* InfoPlist.strings */,
 				01601FC716818F6900E5FEF5 /* main.m */,
@@ -177,6 +191,9 @@
 				01601FD016818F6900E5FEF5 /* Default@2x.png in Resources */,
 				01601FD216818F6900E5FEF5 /* Default-568h@2x.png in Resources */,
 				01601FD516818F6900E5FEF5 /* MainStoryboard.storyboard in Resources */,
+				01601FEF1684233A00E5FEF5 /* test.txt in Resources */,
+				0160200016842D7500E5FEF5 /* test3.txt in Resources */,
+				016020051684471000E5FEF5 /* xzy.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,6 +209,7 @@
 				01601FD816818F6900E5FEF5 /* ViewController.m in Sources */,
 				01601FE21681921D00E5FEF5 /* CTView.m in Sources */,
 				01601FE51681B8C600E5FEF5 /* MarkupParser.m in Sources */,
+				016020031684312F00E5FEF5 /* CTColumnView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +328,7 @@
 				01601FDD16818F6900E5FEF5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

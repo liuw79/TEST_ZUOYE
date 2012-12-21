@@ -6,10 +6,20 @@
 //  Copyright (c) 2012年 liuwei. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import <CoreText/CoreText.h>
-#import "MarkupParser.h"
 
-@interface CTView : UIView
+#import "MarkupParser.h"
+#import <CoreText/CoreText.h>
+#import <UIKit/UIKit.h>
+#import "CTColumnView.h"
+
+@interface CTView : UIScrollView<UIScrollViewDelegate>
+
+@property float frameXOffset;
+@property float frameYOffset;
+
+@property (retain, nonatomic) NSAttributedString* attString;
+@property (retain, nonatomic) NSMutableArray* frames;
+
+- (void)buildFrames;
 
 @end

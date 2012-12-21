@@ -16,7 +16,8 @@
 {
     self = [super init];
     if (self) {
-        self.font = @"ArialMT";
+        //self.font = @"Helvetica";
+        self.font = @"Arial Unicode MS";
         self.color = [UIColor blackColor];
         self.strokeColor = [UIColor whiteColor];
         self.strokeWidth = 0.0;
@@ -32,13 +33,11 @@
     NSRegularExpression* regex = [[NSRegularExpression alloc] initWithPattern:@"(.*?)(<[^>]+>|\\Z)" options:NSRegularExpressionCaseInsensitive|NSRegularExpressionDotMatchesLineSeparators error:nil];
     
     NSArray* chunks = [regex matchesInString:markup options:0 range:NSMakeRange(0, [markup length])];
-    NSLog(@"chunks: %@", chunks);
     
     for (NSTextCheckingResult* b in chunks) {
         //You iterate over the chunks matched by the prior regular expression, and in this section you split the chunks by the "<" character (the tag opener). As a result, in parts[0] you have the text to add to the result and in parts[1] you have the content of the tag that changes the formatting for the text that follows.
         NSArray* parts = [[markup substringWithRange:b.range]
                           componentsSeparatedByString:@"<"]; //1
-        NSLog(@"parts: %@", parts);
         
         CTFontRef fontRef = CTFontCreateWithName((__bridge CFStringRef)self.font,24.0f, NULL);
         
@@ -51,13 +50,14 @@
                                (id)[NSNumber numberWithFloat: self.strokeWidth], (NSString *)kCTStrokeWidthAttributeName,
                                nil];
         [aString appendAttributedString:[[NSAttributedString alloc] initWithString:[parts objectAtIndex:0] attributes:attrs]];
-        //NSLog(@"aString: %@", aString);
+        NSLog(@"aString: %@", aString);
         
         CFRelease(fontRef);
         
         //handle new formatting tag //3
         if ([parts count]>1) {
             NSString* tag = (NSString*)[parts objectAtIndex:1];
+            
             if ([tag hasPrefix:@"font"]) {
                 //stroke color
                 NSRegularExpression* scolorRegex = [[NSRegularExpression alloc] initWithPattern:@"(?<=strokeColor=\")\\w+" options:0 error:NULL];

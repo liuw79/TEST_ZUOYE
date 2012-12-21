@@ -7,42 +7,70 @@
 //  http://www.raywenderlich.com/4147/how-to-create-a-simple-magazine-app-with-core-text
 
 #import "CTView.h"
+#import <CoreText/CoreText.h>
 
 @implementation CTView
 
-- (void)drawRect:(CGRect)rect
+- (void)buildFrames
 {
-    [super drawRect:rect];
+    //here we do some setup - define the x & y offsets, enable paging and create an empty frames array
+    self.frameXOffset = 20;  //1  
+    self.frameYOffset = 20;
+    self.pagingEnabled = YES;
+    self.delegate = self;
+    self.frames = [NSMutableArray array];
     
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    //把颠倒的文字纠正过来：
-    CGContextSetTextMatrix(context, CGAffineTransformIdentity);
-    CGContextTranslateCTM(context, 0, self.bounds.size.height);
-    CGContextScaleCTM(context, 1.0, -1.0);
+    //buildFrames continues by creating a path and a frame for the view's bounds (offset slightly so we have a margin).
+    CGMutablePathRef path = CGPathCreateMutable();  //2
+    CGRect textFrame = CGRectInset(self.bounds, self.frameXOffset, self.frameYOffset);
+    CGPathAddRect(path, NULL, textFrame);
     
-    //1 Here you need to create a path which bounds the area where you will be drawing text. Core Text on the Mac supports different shapes like rectangles and circles, but for the moment iOS supports only rectangular shape for drawing with Core Text. In this simple example, you’ll use the entire view bounds as the rectangle where you will be drawing by creating a CGPath reference from self.bounds
-    CGMutablePathRef path = CGPathCreateMutable();
-    CGPathAddRect(path, NULL, self.bounds);
+    CTFramesetterRef framesetter = CTFramesetterCreateWithAttributedString((__bridge CFAttributedStringRef)self.attString);
     
-    //2 In Core Text you won’t be using NSString, but rather NSAttributedString, as shown here. NSAttributedString is a very powerful NSString derivate class, which allows you apply formatting attributes to text. For the moment we won’t be using formatting – this just creates a string holding plain text.
-    MarkupParser* p = [[MarkupParser alloc] init];
-    //NSAttributedString* attString = [[NSAttributedString alloc] initWithString:@"Hello world core text!"];
-    NSAttributedString* attString = [p attrStringFromMarkup:@"Hello <font color=\"red\">core text <font color=\"blue\">world!"];
+    //buildFrames continues by creating a path and a frame for the view's bounds (offset slightly so we have a margin).
+    int textPos = 0;  //3
+    int columnIndex = 0;
     
-    
-    //3 create a CTFramesetter reference
-    //CTFramesetter is the most important class to use when drawing with Core Text. It manages your font references and your text drawing frames. For the moment what you need to know is that CTFramesetterCreateWithAttributedString creates a CTFramesetter for you, retains it and initializes it with the supplied attributed string. In this section, after you have the framesetter you create a frame, you give the CTFramesetterCreateFrame a range of the string to render (we choose the entire string here) and the rectangle where the text will appear when drawn.
-    CTFramesetterRef framesetter = CTFramesetterCreateWithAttributedString((__bridge CFAttributedStringRef)attString);
-    CTFrameRef frame = CTFramesetterCreateFrame(framesetter, CFRangeMake(0, [attString length]), path, NULL);
-    
-    //4 Here CTFrameDraw draws the supplied frame in the given context.
-    CTFrameDraw(frame, context);
-    
-    //5 Finally, all the used objects are released.
-    CFRelease(frame);
-    CFRelease(path);
-    CFRelease(framesetter);
-    
+    //The while loop here runs until we've reached the end of the text. Inside the loop we create a column bounds: colRect is a CGRect which depending on columnIndex holds the origin and size of the current column. Note that we are building columns continuously to the right (not across and then down).
+    while (textPos < [self.attString length])  //4
+    {
+        CGPoint colOffset = CGPointMake((columnIndex + 1)*self.frameXOffset + columnIndex*(textFrame.size.width/2), 20);
+        CGRect colRect = CGRectMake(0, 0, textFrame.size.width/2 - 10, textFrame.size.height - 40);
+        
+        CGMutablePathRef path = CGPathCreateMutable();
+        CGPathAddRect(path, NULL, colRect);
+        
+        //use the column path
+        CTFrameRef frame = CTFramesetterCreateFrame(framesetter, CFRangeMake(textPos, 0), path, NULL);
+        CFRange frameRange = CTFrameGetVisibleStringRange(frame);
+        
+        //create an empty column view  5 This makes use of CTFrameGetVisibleStringRange function to figure out what portion of the string can fit in the frame (a text column in this case). textPos is incremented by the length of this range, and so the building of the next column can begin on the next loop (if there's more text remaining).
+        CTColumnView* content = [[CTColumnView alloc] initWithFrame:CGRectMake(0, 0, self.contentSize.width, self.contentSize.height)];
+        content.backgroundColor = [UIColor clearColor];
+        content.frame = CGRectMake(colOffset.x, colOffset.y, colRect.size.width, colRect.size.height);
+        
+        //set the column view contents and add it as subview
+        [content setCTFrame:(__bridge id)frame];   //6
+        [self.frames addObject:(__bridge id)frame];
+        [self addSubview:content];
+        
+        //prepare for next frame
+        textPos += frameRange.length;
+        
+        //release(frame)
+        CFRelease(path);
+        
+        columnIndex ++;
+    }
+    //set the total width of the scroll view
+    int totalPages = (columnIndex + 1)/2;   //7
+    self.contentSize = CGSizeMake(totalPages*self.bounds.size.width, textFrame.size.height);
+}
+
+- (void)dealloc
+{
+    _attString = nil;
+    _frames = nil;
 }
 
 @end

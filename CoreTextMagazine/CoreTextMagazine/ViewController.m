@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "CTView.h"
+#import "MarkupParser.h"
 
 @interface ViewController ()
 
@@ -18,6 +20,15 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    NSString* path = [[NSBundle mainBundle] pathForResource:@"test3" ofType:@"txt"];
+    NSString* text = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:NULL];
+    
+    MarkupParser* p = [[MarkupParser alloc] init];
+    NSAttributedString* attString = [p attrStringFromMarkup:text];
+    [(CTView*)self.view setAttString: attString];
+    
+    [(CTView *)[self view] buildFrames];
 }
 
 - (void)didReceiveMemoryWarning
