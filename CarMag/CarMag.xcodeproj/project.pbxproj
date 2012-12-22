@@ -1,0 +1,341 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		016D2B8B1685331800CFE438 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 016D2B8A1685331800CFE438 /* UIKit.framework */; };
+		016D2B8D1685331800CFE438 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 016D2B8C1685331800CFE438 /* Foundation.framework */; };
+		016D2B8F1685331800CFE438 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 016D2B8E1685331800CFE438 /* CoreGraphics.framework */; };
+		016D2B951685331800CFE438 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 016D2B931685331800CFE438 /* InfoPlist.strings */; };
+		016D2B971685331800CFE438 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 016D2B961685331800CFE438 /* main.m */; };
+		016D2B9B1685331800CFE438 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 016D2B9A1685331800CFE438 /* AppDelegate.m */; };
+		016D2B9D1685331800CFE438 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 016D2B9C1685331800CFE438 /* Default.png */; };
+		016D2B9F1685331800CFE438 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 016D2B9E1685331800CFE438 /* Default@2x.png */; };
+		016D2BA11685331800CFE438 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 016D2BA01685331800CFE438 /* Default-568h@2x.png */; };
+		016D2BA41685331800CFE438 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 016D2BA31685331800CFE438 /* ViewController.m */; };
+		016D2BB216854AEC00CFE438 /* Magazine.m in Sources */ = {isa = PBXBuildFile; fileRef = 016D2BB116854AEC00CFE438 /* Magazine.m */; };
+		016D2BB516854C9300CFE438 /* MagazineShelf.m in Sources */ = {isa = PBXBuildFile; fileRef = 016D2BB416854C9300CFE438 /* MagazineShelf.m */; };
+		016D2BBC1685512A00CFE438 /* CoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 016D2BBA1685512A00CFE438 /* CoverViewController.m */; };
+		016D2BC0168551DF00CFE438 /* CoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 016D2BBF168551DF00CFE438 /* CoverView.m */; };
+		016D2BC31685522700CFE438 /* MyImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 016D2BC21685522700CFE438 /* MyImageView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		016D2B861685331800CFE438 /* CarMag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarMag.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		016D2B8A1685331800CFE438 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		016D2B8C1685331800CFE438 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		016D2B8E1685331800CFE438 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		016D2B921685331800CFE438 /* CarMag-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CarMag-Info.plist"; sourceTree = "<group>"; };
+		016D2B941685331800CFE438 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		016D2B961685331800CFE438 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		016D2B981685331800CFE438 /* CarMag-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CarMag-Prefix.pch"; sourceTree = "<group>"; };
+		016D2B991685331800CFE438 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		016D2B9A1685331800CFE438 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		016D2B9C1685331800CFE438 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		016D2B9E1685331800CFE438 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		016D2BA01685331800CFE438 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		016D2BA21685331800CFE438 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		016D2BA31685331800CFE438 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		016D2BB016854AEC00CFE438 /* Magazine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Magazine.h; sourceTree = "<group>"; };
+		016D2BB116854AEC00CFE438 /* Magazine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Magazine.m; sourceTree = "<group>"; };
+		016D2BB316854C9300CFE438 /* MagazineShelf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagazineShelf.h; sourceTree = "<group>"; };
+		016D2BB416854C9300CFE438 /* MagazineShelf.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagazineShelf.m; sourceTree = "<group>"; };
+		016D2BB91685512A00CFE438 /* CoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoverViewController.h; sourceTree = "<group>"; };
+		016D2BBA1685512A00CFE438 /* CoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoverViewController.m; sourceTree = "<group>"; };
+		016D2BBE168551DF00CFE438 /* CoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoverView.h; sourceTree = "<group>"; };
+		016D2BBF168551DF00CFE438 /* CoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoverView.m; sourceTree = "<group>"; };
+		016D2BC11685522700CFE438 /* MyImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyImageView.h; sourceTree = "<group>"; };
+		016D2BC21685522700CFE438 /* MyImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyImageView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		016D2B831685331800CFE438 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				016D2B8B1685331800CFE438 /* UIKit.framework in Frameworks */,
+				016D2B8D1685331800CFE438 /* Foundation.framework in Frameworks */,
+				016D2B8F1685331800CFE438 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		016D2B7B1685331800CFE438 = {
+			isa = PBXGroup;
+			children = (
+				016D2B901685331800CFE438 /* CarMag */,
+				016D2B891685331800CFE438 /* Frameworks */,
+				016D2B871685331800CFE438 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		016D2B871685331800CFE438 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				016D2B861685331800CFE438 /* CarMag.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		016D2B891685331800CFE438 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				016D2B8A1685331800CFE438 /* UIKit.framework */,
+				016D2B8C1685331800CFE438 /* Foundation.framework */,
+				016D2B8E1685331800CFE438 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		016D2B901685331800CFE438 /* CarMag */ = {
+			isa = PBXGroup;
+			children = (
+				016D2BAF16854A5000CFE438 /* Controller */,
+				016D2BAE16854A4500CFE438 /* View */,
+				016D2BAD16854A3800CFE438 /* Model */,
+				016D2B911685331800CFE438 /* Supporting Files */,
+				016D2B991685331800CFE438 /* AppDelegate.h */,
+				016D2B9A1685331800CFE438 /* AppDelegate.m */,
+			);
+			path = CarMag;
+			sourceTree = "<group>";
+		};
+		016D2B911685331800CFE438 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				016D2B921685331800CFE438 /* CarMag-Info.plist */,
+				016D2B931685331800CFE438 /* InfoPlist.strings */,
+				016D2B961685331800CFE438 /* main.m */,
+				016D2B981685331800CFE438 /* CarMag-Prefix.pch */,
+				016D2B9C1685331800CFE438 /* Default.png */,
+				016D2B9E1685331800CFE438 /* Default@2x.png */,
+				016D2BA01685331800CFE438 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		016D2BAD16854A3800CFE438 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				016D2BB016854AEC00CFE438 /* Magazine.h */,
+				016D2BB116854AEC00CFE438 /* Magazine.m */,
+				016D2BB316854C9300CFE438 /* MagazineShelf.h */,
+				016D2BB416854C9300CFE438 /* MagazineShelf.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		016D2BAE16854A4500CFE438 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				016D2BBE168551DF00CFE438 /* CoverView.h */,
+				016D2BBF168551DF00CFE438 /* CoverView.m */,
+				016D2BC11685522700CFE438 /* MyImageView.h */,
+				016D2BC21685522700CFE438 /* MyImageView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		016D2BAF16854A5000CFE438 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				016D2BA21685331800CFE438 /* ViewController.h */,
+				016D2BA31685331800CFE438 /* ViewController.m */,
+				016D2BB91685512A00CFE438 /* CoverViewController.h */,
+				016D2BBA1685512A00CFE438 /* CoverViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		016D2B851685331800CFE438 /* CarMag */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 016D2BAA1685331800CFE438 /* Build configuration list for PBXNativeTarget "CarMag" */;
+			buildPhases = (
+				016D2B821685331800CFE438 /* Sources */,
+				016D2B831685331800CFE438 /* Frameworks */,
+				016D2B841685331800CFE438 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CarMag;
+			productName = CarMag;
+			productReference = 016D2B861685331800CFE438 /* CarMag.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		016D2B7D1685331800CFE438 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "LIU WEI";
+			};
+			buildConfigurationList = 016D2B801685331800CFE438 /* Build configuration list for PBXProject "CarMag" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 016D2B7B1685331800CFE438;
+			productRefGroup = 016D2B871685331800CFE438 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				016D2B851685331800CFE438 /* CarMag */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		016D2B841685331800CFE438 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				016D2B951685331800CFE438 /* InfoPlist.strings in Resources */,
+				016D2B9D1685331800CFE438 /* Default.png in Resources */,
+				016D2B9F1685331800CFE438 /* Default@2x.png in Resources */,
+				016D2BA11685331800CFE438 /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		016D2B821685331800CFE438 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				016D2B971685331800CFE438 /* main.m in Sources */,
+				016D2B9B1685331800CFE438 /* AppDelegate.m in Sources */,
+				016D2BA41685331800CFE438 /* ViewController.m in Sources */,
+				016D2BB216854AEC00CFE438 /* Magazine.m in Sources */,
+				016D2BB516854C9300CFE438 /* MagazineShelf.m in Sources */,
+				016D2BBC1685512A00CFE438 /* CoverViewController.m in Sources */,
+				016D2BC0168551DF00CFE438 /* CoverView.m in Sources */,
+				016D2BC31685522700CFE438 /* MyImageView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		016D2B931685331800CFE438 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				016D2B941685331800CFE438 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		016D2BA81685331800CFE438 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		016D2BA91685331800CFE438 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		016D2BAB1685331800CFE438 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CarMag/CarMag-Prefix.pch";
+				INFOPLIST_FILE = "CarMag/CarMag-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		016D2BAC1685331800CFE438 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CarMag/CarMag-Prefix.pch";
+				INFOPLIST_FILE = "CarMag/CarMag-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		016D2B801685331800CFE438 /* Build configuration list for PBXProject "CarMag" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				016D2BA81685331800CFE438 /* Debug */,
+				016D2BA91685331800CFE438 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		016D2BAA1685331800CFE438 /* Build configuration list for PBXNativeTarget "CarMag" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				016D2BAB1685331800CFE438 /* Debug */,
+				016D2BAC1685331800CFE438 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 016D2B7D1685331800CFE438 /* Project object */;
+}
